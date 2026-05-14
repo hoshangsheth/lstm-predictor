@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: lstm-predictor-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+    disk:
+      name: model-artifacts
+      mountPath: /opt/render/project/src/artifacts
+      sizeGB: 1

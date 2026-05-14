@@ -1,0 +1,18 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pkl
+*.egg-info/
+.env
+
+# Node
+frontend/node_modules/
+frontend/.next/
+
+# Model artifacts (too large for git)
+backend/artifacts/lstm_model.keras
+
+# OS
+.DS_Store
+Thumbs.db
